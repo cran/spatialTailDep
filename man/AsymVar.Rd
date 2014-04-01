@@ -1,0 +1,67 @@
+\name{AsymVar}
+\alias{AsymVar}
+\title{Function \code{AsymVar}}
+\usage{
+AsymVar(pairs, model, theta, Tol = 1e-05)
+}
+\arguments{
+  \item{pairs}{A \eqn{q} x 4 matrix giving the Cartesian
+  coordinates of the \eqn{q} pairs of locations.}
+
+  \item{model}{Choose between "smith" and "BR".}
+
+  \item{theta}{Parameter vector. For the Smith model,
+  \code{theta} must be equal to the 2 x 2 covariance
+  matrix. For the Brown-Resnick pocess, \code{theta} \eqn{
+  = (\alpha, \rho, \beta, c)}.}
+
+  \item{Tol}{The tolerance in the numerical integration
+  procedure. Defaults to 1e-5.}
+}
+\value{
+A \eqn{q} x \eqn{q} matrix.
+}
+\description{
+Function to compute the asymptotic variance matrix of the
+pairwise M-estimator for the Smith model or the
+Brown-Resnick process.
+}
+\details{
+For a matrix of coordinates of pairs of locations, this
+function returns the asymptotic variance matrix of the
+estimator. An optimal weight matrix can be defined as the
+inverse of the asymptotic variance matrix. For a detailed
+description of this procedure, see Einmahl et al. (2014).
+
+The parameter vector \code{theta} must be a positive
+semi-definite matrix if \code{model = "smith"} and a vector
+of length four if \code{model = "BR"}, where \eqn{0 <
+\alpha < 1}, \eqn{\rho > 0}, \eqn{0 < \beta \le \pi/2} and
+\eqn{c > 0}.
+}
+\examples{
+## Define the locations of three stations
+(locations <- rbind(c(1.0,1.0),c(2.0,1.0),c(1.2,2.5)))
+## select pairs
+(pairIndices <- selectPairIndices(locations, maxDistance = 3))
+(pairs <- pairCoordinates(locations, pairIndices))
+## Smith model parameter matrix
+(theta <- rbind(c(1.5, .5), c(.5, 1)))
+## The matrix. Takes a couple of seconds to compute.
+## AsymVar(pairs, model = "smith", theta = theta, Tol = 1e-04)
+
+## Parameters of the Brown-Resnick process
+(theta <- c(1.5,1,0.5,0.25))
+## The matrix. Takes a couple of seconds to compute.
+## AsymVar(pairs, model = "BR", theta = theta, Tol = 1e-04)
+}
+\references{
+Einmahl, J.H.J., Kiriliouk, A., Krajina, A. and Segers, J.
+(2014), "An M-estimator of spatial tail dependence". See
+\url{http://arxiv.org/abs/1403.1975}.
+}
+\seealso{
+\code{\link{Mestimator}}, \code{\link{selectPairIndices}},
+\code{\link{pairCoordinates}}
+}
+

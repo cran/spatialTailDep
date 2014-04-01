@@ -1,0 +1,16 @@
+6b2eb7d8cd90878077843c4845fe42b7 *DESCRIPTION
+66d9236e3895fe017c0ff3d262f387c3 *NAMESPACE
+c1c979d78fed167d41b186f57e315b03 *R/Estimation.R
+02e8a25ca5bafd97dc92bb103af7dd76 *R/EstimationBR.r
+ebb1801d96c5a80a5022dfd682eb9787 *R/EstimationSmith.r
+ee0b77ca070a9eab43b78feccf0f4c16 *R/gridUtilities.r
+00cd7499c358f817dbbac74023a7cd56 *R/spatialTailDep-package.r
+6164dbddc97a2c5deeb0f4309fe0e87f *R/tailIntEmp.r
+a99bebff4852f4a52cf9bf44b7a4c565 *man/AsymVar.Rd
+68e099b55dce22df9be7d4e9cbe0908d *man/Mestimator.Rd
+9d35afb0c3bfe638ea2b706e4e332924 *man/pairCoordinates.Rd
+2e2c8467504368daeeb6af0747aa6d1a *man/selectPairIndices.Rd
+886b5d7e47417a2c9b2cb129950a99a4 *man/spatialTailDep.Rd
+1bb3b2d3eb75499148cc94d4c15c0e46 *man/tailInt.Rd
+0a801e1ef1d94563a0696cabd80b674e *man/tailIntEmp.Rd
+a995f2ab909282e651036e852fbf808c *src/ell.c
