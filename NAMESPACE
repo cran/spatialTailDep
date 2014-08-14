@@ -1,4 +1,4 @@
-useDynLib(spatialTailDep, .registration = TRUE)
+useDynLib("spatialTailDep", .registration=TRUE)
 import(cubature)
 import(mvtnorm)
 import(SpatialExtremes)
