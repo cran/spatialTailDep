@@ -82,15 +82,15 @@ pairCoordinates <- function(locations, pairIndices) {
 #' weather stations, where a distance of 1 corresponds to 100 kilometers. For more 
 #' information on this dataset, see Einmahl et al. (2014).
 #'
-#' @format KNMIdata$KNMI is a matrix with 563 rows and 22 columns, KNMI$coord is a matrix with 22 rows
+#' @format KNMIdata$data is a matrix with 672 rows and 22 columns, KNMI$loc is a matrix with 22 rows
 #' and 2 columns.
 #' @source \url{http://www.knmi.nl/climatology/daily_data/selection.cgi}
 #' @name KNMIdata
 #' @references Einmahl, J.H.J., Kiriliouk, A., Krajina, A. and Segers, J. (2014), "An M-estimator of spatial tail dependence". See \url{http://arxiv.org/abs/1403.1975}.
 #' @examples
 #' data(KNMIdata)
-#' locations <- KNMIdata$coord
+#' locations <- KNMIdata$loc
 #' pairIndices <- selectPairIndices(locations, maxDistance = 0.5)
-#' Mestimator(KNMIdata$data, locations, pairIndices, k = 50, model="BR",
+#' Mestimator(KNMIdata$data, locations, pairIndices, k = 60, model="BR",
 #' iterate=FALSE, covMat = FALSE)$theta
 NULL

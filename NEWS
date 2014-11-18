@@ -1,3 +1,9 @@
+spatialTailDep 1.0.2
+===============
+
+* updated the dataset KNMIdata, which is used in ``An M-estimator of spatial tail   
+  dependence" (Einmahl, J., Kiriliouk, A., Krajina, A., and Segers, J.)
+
 spatialTailDep 1.0.1
 ===============
 
